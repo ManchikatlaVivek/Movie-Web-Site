@@ -7,4 +7,4 @@ Software Requirements
   
 Note:
 Please note that we have set the parameters like username, password and database name as default given by the mamp server.
-Database xml files have been also included.
+Database xml files have been also included.You just have to import the xml files in your server so as to see the content in it.
