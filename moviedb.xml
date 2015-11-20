@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.4.10
+- http://www.phpmyadmin.net
+-
+- Host: localhost:8889
+- Generation Time: Nov 20, 2015 at 09:25 AM
+- Server version: 5.5.42
+- PHP Version: 5.6.10
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="movie" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="actor">
+                CREATE TABLE `actor` (
+                  `actor_id` varchar(30) NOT NULL,
+                  `fname` varchar(30) DEFAULT NULL,
+                  `lname` varchar(30) DEFAULT NULL,
+                  `dob` date DEFAULT NULL,
+                  `no_of_awards` int(11) DEFAULT NULL,
+                  PRIMARY KEY (`actor_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="awards">
+                CREATE TABLE `awards` (
+                  `awardname` varchar(30) NOT NULL DEFAULT '',
+                  `movie_id` varchar(30) NOT NULL DEFAULT '',
+                  `year` varchar(4) DEFAULT NULL,
+                  `category` varchar(30) NOT NULL DEFAULT '',
+                  `type` varchar(40) NOT NULL,
+                  PRIMARY KEY (`awardname`,`movie_id`,`category`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="director">
+                CREATE TABLE `director` (
+                  `director_id` varchar(30) NOT NULL,
+                  `fname` varchar(30) DEFAULT NULL,
+                  `lname` varchar(30) DEFAULT NULL,
+                  `dob` date DEFAULT NULL,
+                  `gender` char(1) DEFAULT NULL,
+                  PRIMARY KEY (`director_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="movie">
+                CREATE TABLE `movie` (
+                  `movie_id` varchar(30) NOT NULL,
+                  `actor_id` varchar(30) DEFAULT NULL,
+                  `director_id` varchar(30) DEFAULT NULL,
+                  `title` varchar(30) DEFAULT NULL,
+                  `genre` varchar(30) DEFAULT NULL,
+                  `year` varchar(4) DEFAULT NULL,
+                  `rating` float DEFAULT NULL,
+                  `runtime` int(11) DEFAULT NULL,
+                  `collections` int(11) DEFAULT NULL,
+                  PRIMARY KEY (`movie_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="WISHLIST">
+                CREATE TABLE `WISHLIST` (
+                  `USERNAME` varchar(20) NOT NULL,
+                  `TITLE` varchar(20) NOT NULL,
+                  PRIMARY KEY (`USERNAME`,`TITLE`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'movie'
+    -->
+    <database name="movie">
+        <!-- Table actor -->
+        <table name="actor">
+            <column name="actor_id"></column>
+            <column name="fname"></column>
+            <column name="lname"></column>
+            <column name="dob">0000-00-00</column>
+            <column name="no_of_awards">0</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT001</column>
+            <column name="fname">SHAFI</column>
+            <column name="lname"></column>
+            <column name="dob">1990-10-26</column>
+            <column name="no_of_awards">0</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT002</column>
+            <column name="fname">KALYAN RAM</column>
+            <column name="lname">NANDAMURI</column>
+            <column name="dob">1985-10-06</column>
+            <column name="no_of_awards">0</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT003</column>
+            <column name="fname">TARAKA RAMA RAO</column>
+            <column name="lname">NANDAMURI</column>
+            <column name="dob">1995-07-01</column>
+            <column name="no_of_awards">0</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT026</column>
+            <column name="fname">KRANTHI</column>
+            <column name="lname">KIRAN</column>
+            <column name="dob">2015-10-13</column>
+            <column name="no_of_awards">0</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT034</column>
+            <column name="fname">SHARWANAND</column>
+            <column name="lname"></column>
+            <column name="dob">1995-02-28</column>
+            <column name="no_of_awards">1</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT037</column>
+            <column name="fname">CHRIS</column>
+            <column name="lname">PRATT</column>
+            <column name="dob">1976-06-08</column>
+            <column name="no_of_awards">3</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT048</column>
+            <column name="fname">NAGARJUNA</column>
+            <column name="lname">AKKINENI</column>
+            <column name="dob">1960-08-29</column>
+            <column name="no_of_awards">19</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT053</column>
+            <column name="fname">KRANTHI</column>
+            <column name="lname">KIRAN</column>
+            <column name="dob">2015-10-07</column>
+            <column name="no_of_awards">0</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT055</column>
+            <column name="fname">NIKIL</column>
+            <column name="lname">SIDDARTH</column>
+            <column name="dob">1990-03-01</column>
+            <column name="no_of_awards">5</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT066</column>
+            <column name="fname">CHIRANJEEVI</column>
+            <column name="lname"></column>
+            <column name="dob">1973-04-04</column>
+            <column name="no_of_awards">22</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT067</column>
+            <column name="fname">PRABHAS</column>
+            <column name="lname"></column>
+            <column name="dob">1973-10-23</column>
+            <column name="no_of_awards">15</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT068</column>
+            <column name="fname">MAHESH</column>
+            <column name="lname">BABU</column>
+            <column name="dob">1988-06-13</column>
+            <column name="no_of_awards">10</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT092</column>
+            <column name="fname">TRISHA</column>
+            <column name="lname">KRISHNAN</column>
+            <column name="dob">1984-08-17</column>
+            <column name="no_of_awards">4</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT099</column>
+            <column name="fname">JAGAPATI</column>
+            <column name="lname">BABU</column>
+            <column name="dob">1973-01-01</column>
+            <column name="no_of_awards">12</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT100</column>
+            <column name="fname">NAGA CHAITANYA</column>
+            <column name="lname">AKKINENI</column>
+            <column name="dob">1989-11-29</column>
+            <column name="no_of_awards">10</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT190</column>
+            <column name="fname">ARJUN</column>
+            <column name="lname">ALLU</column>
+            <column name="dob">1945-05-04</column>
+            <column name="no_of_awards">2</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT234</column>
+            <column name="fname">JESSE </column>
+            <column name="lname">EINSBERG</column>
+            <column name="dob">1985-11-12</column>
+            <column name="no_of_awards">3</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT401</column>
+            <column name="fname">SAMANTHA </column>
+            <column name="lname">RUTH PRABHU</column>
+            <column name="dob">1988-05-26</column>
+            <column name="no_of_awards">10</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT404</column>
+            <column name="fname">NANI</column>
+            <column name="lname"></column>
+            <column name="dob">1988-12-23</column>
+            <column name="no_of_awards">5</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT445</column>
+            <column name="fname">GENELIA</column>
+            <column name="lname">D SOUZA</column>
+            <column name="dob">1995-02-06</column>
+            <column name="no_of_awards">5</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT500</column>
+            <column name="fname">RAM CHARAN</column>
+            <column name="lname">KONIDELA</column>
+            <column name="dob">1980-04-01</column>
+            <column name="no_of_awards">6</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT570</column>
+            <column name="fname">RANA</column>
+            <column name="lname">DAGGUBATI</column>
+            <column name="dob">1972-02-01</column>
+            <column name="no_of_awards">6</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT872</column>
+            <column name="fname">MARK</column>
+            <column name="lname">RUFFALO</column>
+            <column name="dob">1971-08-17</column>
+            <column name="no_of_awards">1</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT876</column>
+            <column name="fname">CHRISTIAN</column>
+            <column name="lname">BALE</column>
+            <column name="dob">1967-01-04</column>
+            <column name="no_of_awards">5</column>
+        </table>
+        <table name="actor">
+            <column name="actor_id">ACT987</column>
+            <column name="fname">RAVITEJA</column>
+            <column name="lname"></column>
+            <column name="dob">1982-10-05</column>
+            <column name="no_of_awards">6</column>
+        </table>
+        <!-- Table awards -->
+        <table name="awards">
+            <column name="awardname"></column>
+            <column name="movie_id"></column>
+            <column name="year"></column>
+            <column name="category"></column>
+            <column name="type"></column>
+        </table>
+        <table name="awards">
+            <column name="awardname">ACADEMY</column>
+            <column name="movie_id">MOV111</column>
+            <column name="year">2012</column>
+            <column name="category">BEST DIRECTOR</column>
+            <column name="type">DIRECTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">ACADEMY</column>
+            <column name="movie_id">MOV201</column>
+            <column name="year">2012</column>
+            <column name="category">BEST ACTOR</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">ACADEMY</column>
+            <column name="movie_id">MOV521</column>
+            <column name="year">2014</column>
+            <column name="category">BEST DIRECTOR</column>
+            <column name="type">DIRECTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id"></column>
+            <column name="year">2011</column>
+            <column name="category">BEST ACTOR</column>
+            <column name="type">DIRECTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV023</column>
+            <column name="year">2009</column>
+            <column name="category">BEST ACTOR</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV100</column>
+            <column name="year">2010</column>
+            <column name="category">BEST MALE DEBUT</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV200</column>
+            <column name="year">2005</column>
+            <column name="category">BEST ACTOR</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV201</column>
+            <column name="year">2004</column>
+            <column name="category">BEST ACTOR</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV201</column>
+            <column name="year">2003</column>
+            <column name="category">BEST DIRECTOR</column>
+            <column name="type">DIRECTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV401</column>
+            <column name="year">2012</column>
+            <column name="category">BEST DEBUT DIRECTOR</column>
+            <column name="type">DIRECTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV402</column>
+            <column name="year">2004</column>
+            <column name="category">BEST FEMALE DEBUT</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV403</column>
+            <column name="year">2011</column>
+            <column name="category">BEST MALE DEBUT</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV500</column>
+            <column name="year">2010</column>
+            <column name="category">BEST DIRECTOR</column>
+            <column name="type">DIRECTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV501</column>
+            <column name="year">2011</column>
+            <column name="category">BEST DIRECTOR</column>
+            <column name="type">DIRECTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV501</column>
+            <column name="year">2011</column>
+            <column name="category">BEST FEMALE DEBUT</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV903</column>
+            <column name="year">2015</column>
+            <column name="category">BEST ACTOR</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">CINEMAA AWARD</column>
+            <column name="movie_id">MOV944</column>
+            <column name="year">2005</column>
+            <column name="category">BEST ACTOR</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <table name="awards">
+            <column name="awardname">OSCAR</column>
+            <column name="movie_id">MOV765</column>
+            <column name="year">2010</column>
+            <column name="category">BEST ACTOR</column>
+            <column name="type">ACTOR</column>
+        </table>
+        <!-- Table director -->
+        <table name="director">
+            <column name="director_id"></column>
+            <column name="fname"></column>
+            <column name="lname"></column>
+            <column name="dob">0000-00-00</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR001</column>
+            <column name="fname">RAKESH</column>
+            <column name="lname">SRINIVAS</column>
+            <column name="dob">1980-10-26</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR002</column>
+            <column name="fname">ANIL</column>
+            <column name="lname">RAVIPUDI</column>
+            <column name="dob">1975-10-07</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR003</column>
+            <column name="fname">PURI</column>
+            <column name="lname">JAGANNADH</column>
+            <column name="dob">1960-10-12</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR004</column>
+            <column name="fname">VASU</column>
+            <column name="lname">VARMA</column>
+            <column name="dob">1950-10-29</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR006</column>
+            <column name="fname">SUBBAYYA</column>
+            <column name="lname">MUTYALA</column>
+            <column name="dob">1979-05-22</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR009</column>
+            <column name="fname">KARUNAKARAN</column>
+            <column name="lname">A</column>
+            <column name="dob">1976-10-04</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR012</column>
+            <column name="fname">MADAN</column>
+            <column name="lname"></column>
+            <column name="dob">1981-04-01</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR023</column>
+            <column name="fname">BHASKAR</column>
+            <column name="lname"></column>
+            <column name="dob">1970-07-15</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR045</column>
+            <column name="fname">KARTHIK</column>
+            <column name="lname">GHATTAMANENI</column>
+            <column name="dob">1986-12-17</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR056</column>
+            <column name="fname">KRANTHI</column>
+            <column name="lname">MADHAV</column>
+            <column name="dob">1985-02-05</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR059</column>
+            <column name="fname">PRABHU</column>
+            <column name="lname">DEVA</column>
+            <column name="dob">1980-10-27</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR201</column>
+            <column name="fname">GUNASEKHAR</column>
+            <column name="lname"></column>
+            <column name="dob">1973-06-07</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR322</column>
+            <column name="fname">SOBHAN</column>
+            <column name="lname"></column>
+            <column name="dob">1984-09-24</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR342</column>
+            <column name="fname"> CHRISTOPHER</column>
+            <column name="lname">NOLAN</column>
+            <column name="dob">1976-08-25</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR401</column>
+            <column name="fname">NANDINI REDDY</column>
+            <column name="lname">B.V</column>
+            <column name="dob">1986-07-16</column>
+            <column name="gender">F</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR402</column>
+            <column name="fname">SEKHAR </column>
+            <column name="lname">KAMMULA</column>
+            <column name="dob">1981-06-13</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR403</column>
+            <column name="fname">SURYA KIRAN</column>
+            <column name="lname"></column>
+            <column name="dob">1982-07-12</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR453</column>
+            <column name="fname">CAIROS</column>
+            <column name="lname">SALDANHA</column>
+            <column name="dob">1974-07-24</column>
+            <column name="gender">F</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR501</column>
+            <column name="fname">GOUTHAM</column>
+            <column name="lname">MENON</column>
+            <column name="dob">1973-02-25</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR554</column>
+            <column name="fname">HARISH</column>
+            <column name="lname">SHANKAR</column>
+            <column name="dob">1987-03-24</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR567</column>
+            <column name="fname">RAJAMOULI</column>
+            <column name="lname">S.S</column>
+            <column name="dob">1980-10-27</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR588</column>
+            <column name="fname">SURENDAR</column>
+            <column name="lname">REDDY</column>
+            <column name="dob">1980-01-01</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR624</column>
+            <column name="fname">JOSS</column>
+            <column name="lname">WERDON</column>
+            <column name="dob">1984-06-27</column>
+            <column name="gender">F</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR761</column>
+            <column name="fname">PHIL</column>
+            <column name="lname">RHOD</column>
+            <column name="dob">1938-10-13</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR778</column>
+            <column name="fname">SUKUMAR</column>
+            <column name="lname">BANDREDDI</column>
+            <column name="dob">1971-01-11</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR901</column>
+            <column name="fname">DASARATH</column>
+            <column name="lname"></column>
+            <column name="dob">1984-05-14</column>
+            <column name="gender">M</column>
+        </table>
+        <table name="director">
+            <column name="director_id">DIR990</column>
+            <column name="fname">RAGHAVENDRA</column>
+            <column name="lname">RAO</column>
+            <column name="dob">1960-10-21</column>
+            <column name="gender">M</column>
+        </table>
+        <!-- Table movie -->
+        <table name="movie">
+            <column name="movie_id"></column>
+            <column name="actor_id"></column>
+            <column name="director_id"></column>
+            <column name="title"></column>
+            <column name="genre"></column>
+            <column name="year"></column>
+            <column name="rating">0</column>
+            <column name="runtime">0</column>
+            <column name="collections">0</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV001</column>
+            <column name="actor_id">ACT001</column>
+            <column name="director_id">DIR001</column>
+            <column name="title">A SHYAM GOPAL VARMA FILM</column>
+            <column name="genre">COMEDY</column>
+            <column name="year">2015</column>
+            <column name="rating">4.3</column>
+            <column name="runtime">120</column>
+            <column name="collections">70</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV002</column>
+            <column name="actor_id">ACT002</column>
+            <column name="director_id">DIR002</column>
+            <column name="title">PATAAS</column>
+            <column name="genre">ACTION</column>
+            <column name="year">2015</column>
+            <column name="rating">4.6875</column>
+            <column name="runtime">120</column>
+            <column name="collections">71</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV003</column>
+            <column name="actor_id">ACT003</column>
+            <column name="director_id">DIR003</column>
+            <column name="title">TEMPER</column>
+            <column name="genre">ACTION</column>
+            <column name="year">2015</column>
+            <column name="rating">4.08202</column>
+            <column name="runtime">120</column>
+            <column name="collections">72</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV023</column>
+            <column name="actor_id">ACT190</column>
+            <column name="director_id">DIR023</column>
+            <column name="title">PARUGU</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2008</column>
+            <column name="rating">2.3</column>
+            <column name="runtime">145</column>
+            <column name="collections">40</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV034</column>
+            <column name="actor_id">ACT034</column>
+            <column name="director_id">DIR056</column>
+            <column name="title">MALLI MALLI IDHI RANI ROJU</column>
+            <column name="genre">DRAMA</column>
+            <column name="year">2015</column>
+            <column name="rating">4.7</column>
+            <column name="runtime">125</column>
+            <column name="collections">40</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV048</column>
+            <column name="actor_id">ACT048</column>
+            <column name="director_id">DIR990</column>
+            <column name="title">SRI RAMADASU</column>
+            <column name="genre">DRAMA</column>
+            <column name="year">2006</column>
+            <column name="rating">5</column>
+            <column name="runtime">162</column>
+            <column name="collections">60</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV055</column>
+            <column name="actor_id">ACT055</column>
+            <column name="director_id">DIR045</column>
+            <column name="title">SURYA VS SURYA</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2015</column>
+            <column name="rating">5</column>
+            <column name="runtime">122</column>
+            <column name="collections">50</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV067</column>
+            <column name="actor_id">ACT067</column>
+            <column name="director_id">DIR059</column>
+            <column name="title">POURNAMI</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2006</column>
+            <column name="rating">2.7</column>
+            <column name="runtime">160</column>
+            <column name="collections">60</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV068</column>
+            <column name="actor_id">ACT068</column>
+            <column name="director_id">DIR003</column>
+            <column name="title">POKIRI</column>
+            <column name="genre">ACTION</column>
+            <column name="year">2006</column>
+            <column name="rating">2.6</column>
+            <column name="runtime">160</column>
+            <column name="collections">90</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV093</column>
+            <column name="actor_id">ACT037</column>
+            <column name="director_id">DIR761</column>
+            <column name="title">LEGO</column>
+            <column name="genre">ANIMATION</column>
+            <column name="year">2014</column>
+            <column name="rating">3</column>
+            <column name="runtime">70</column>
+            <column name="collections">110</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV099</column>
+            <column name="actor_id">ACT099</column>
+            <column name="director_id">DIR012</column>
+            <column name="title">PELLAINA KOTHALO</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2006</column>
+            <column name="rating">4.2</column>
+            <column name="runtime">140</column>
+            <column name="collections">42</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV100</column>
+            <column name="actor_id">ACT100</column>
+            <column name="director_id">DIR004</column>
+            <column name="title">JOSH</column>
+            <column name="genre">ACTION</column>
+            <column name="year">2008</column>
+            <column name="rating">4.1</column>
+            <column name="runtime">150</column>
+            <column name="collections">50</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV111</column>
+            <column name="actor_id">ACT234</column>
+            <column name="director_id">DIR453</column>
+            <column name="title">RIO</column>
+            <column name="genre">ADVENTURE</column>
+            <column name="year">2011</column>
+            <column name="rating">3</column>
+            <column name="runtime">124</column>
+            <column name="collections">124</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV190</column>
+            <column name="actor_id">ACT190</column>
+            <column name="director_id">DIR003</column>
+            <column name="title">ARYA</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2000</column>
+            <column name="rating">3.7</column>
+            <column name="runtime">150</column>
+            <column name="collections">20</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV191</column>
+            <column name="actor_id">ACT190</column>
+            <column name="director_id">DIR009</column>
+            <column name="title">HAPPY</column>
+            <column name="genre">DRAMA</column>
+            <column name="year">2006</column>
+            <column name="rating">1.5</column>
+            <column name="runtime">140</column>
+            <column name="collections">50</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV200</column>
+            <column name="actor_id">ACT190</column>
+            <column name="director_id">DIR778</column>
+            <column name="title">ARYA</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2004</column>
+            <column name="rating">3.2</column>
+            <column name="runtime">147</column>
+            <column name="collections">20</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV201</column>
+            <column name="actor_id">ACT068</column>
+            <column name="director_id">DIR201</column>
+            <column name="title">OKKADU</column>
+            <column name="genre">ACTION</column>
+            <column name="year">2003</column>
+            <column name="rating">4.5</column>
+            <column name="runtime">150</column>
+            <column name="collections">29</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV401</column>
+            <column name="actor_id">ACT404</column>
+            <column name="director_id">DIR401</column>
+            <column name="title">ALA MODALAINDHI</column>
+            <column name="genre">COMEDY</column>
+            <column name="year">2011</column>
+            <column name="rating">2.5</column>
+            <column name="runtime">140</column>
+            <column name="collections">50</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV402</column>
+            <column name="actor_id">ACT445</column>
+            <column name="director_id">DIR403</column>
+            <column name="title">SATYAM</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2003</column>
+            <column name="rating">3.9</column>
+            <column name="runtime">144</column>
+            <column name="collections">7</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV403</column>
+            <column name="actor_id">ACT570</column>
+            <column name="director_id">DIR402</column>
+            <column name="title">LEADER</column>
+            <column name="genre">PHILOSOPHY</column>
+            <column name="year">2010</column>
+            <column name="rating">3</column>
+            <column name="runtime">171</column>
+            <column name="collections">50</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV454</column>
+            <column name="actor_id">ACT987</column>
+            <column name="director_id">DIR554</column>
+            <column name="title">MIRAPAKAYA</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2011</column>
+            <column name="rating">3.6</column>
+            <column name="runtime">144</column>
+            <column name="collections">34</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV500</column>
+            <column name="actor_id">ACT500</column>
+            <column name="director_id">DIR567</column>
+            <column name="title">MAGADEERA</column>
+            <column name="genre">FICTION</column>
+            <column name="year">2009</column>
+            <column name="rating">4.2</column>
+            <column name="runtime">144</column>
+            <column name="collections">90</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV501</column>
+            <column name="actor_id">ACT401</column>
+            <column name="director_id">DIR501</column>
+            <column name="title">YE MAYA CHESAVE</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2010</column>
+            <column name="rating">4.9</column>
+            <column name="runtime">150</column>
+            <column name="collections">100</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV521</column>
+            <column name="actor_id">ACT872</column>
+            <column name="director_id">DIR624</column>
+            <column name="title">AVENGERS</column>
+            <column name="genre">FICTION</column>
+            <column name="year">2012</column>
+            <column name="rating">4</column>
+            <column name="runtime">120</column>
+            <column name="collections">354</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV545</column>
+            <column name="actor_id">ACT445</column>
+            <column name="director_id">DIR023</column>
+            <column name="title">BOMMARILLU</column>
+            <column name="genre">DRAMA</column>
+            <column name="year">2005</column>
+            <column name="rating">2.9</column>
+            <column name="runtime">150</column>
+            <column name="collections">60</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV570</column>
+            <column name="actor_id">ACT570</column>
+            <column name="director_id">DIR003</column>
+            <column name="title">NENU NAA RAKSHASI</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2011</column>
+            <column name="rating">1.5</column>
+            <column name="runtime">145</column>
+            <column name="collections">23</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV667</column>
+            <column name="actor_id">ACT066</column>
+            <column name="director_id">DIR006</column>
+            <column name="title">ANNAYYA</column>
+            <column name="genre">DRAMA</column>
+            <column name="year">2000</column>
+            <column name="rating">3.5</column>
+            <column name="runtime">140</column>
+            <column name="collections">10</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV765</column>
+            <column name="actor_id">ACT876</column>
+            <column name="director_id">DIR342</column>
+            <column name="title">BATMAN</column>
+            <column name="genre">ACTION</column>
+            <column name="year">2008</column>
+            <column name="rating">3</column>
+            <column name="runtime">81</column>
+            <column name="collections">650</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV777</column>
+            <column name="actor_id">ACT190</column>
+            <column name="director_id">DIR023</column>
+            <column name="title">RUN</column>
+            <column name="genre">ACTION</column>
+            <column name="year">2011</column>
+            <column name="rating">3</column>
+            <column name="runtime">150</column>
+            <column name="collections">24</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV903</column>
+            <column name="actor_id">ACT190</column>
+            <column name="director_id">DIR588</column>
+            <column name="title">RACE GURRAM</column>
+            <column name="genre">COMEDY</column>
+            <column name="year">2014</column>
+            <column name="rating">3.5</column>
+            <column name="runtime">163</column>
+            <column name="collections">50</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV944</column>
+            <column name="actor_id">ACT092</column>
+            <column name="director_id">DIR322</column>
+            <column name="title">VARSHAM</column>
+            <column name="genre">ROMANCE</column>
+            <column name="year">2004</column>
+            <column name="rating">3.1</column>
+            <column name="runtime">144</column>
+            <column name="collections">40</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV981</column>
+            <column name="actor_id">ACT067</column>
+            <column name="director_id">DIR901</column>
+            <column name="title">MR.PERFECT</column>
+            <column name="genre">ACTION</column>
+            <column name="year">2011</column>
+            <column name="rating">3.5</column>
+            <column name="runtime">134</column>
+            <column name="collections">67</column>
+        </table>
+        <table name="movie">
+            <column name="movie_id">MOV987</column>
+            <column name="actor_id">ACT987</column>
+            <column name="director_id">DIR567</column>
+            <column name="title">VIKRAMARKUDU</column>
+            <column name="genre">COMEDY</column>
+            <column name="year">2006</column>
+            <column name="rating">3.3</column>
+            <column name="runtime">140</column>
+            <column name="collections">20</column>
+        </table>
+        <!-- Table WISHLIST -->
+        <table name="WISHLIST">
+            <column name="USERNAME"></column>
+            <column name="TITLE">BATMAN</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">a</column>
+            <column name="TITLE">AVENGERS</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">a</column>
+            <column name="TITLE">BATMAN</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">a</column>
+            <column name="TITLE">MAGADEERA</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">a</column>
+            <column name="TITLE">RIO</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">a</column>
+            <column name="TITLE">TEMPER</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">a</column>
+            <column name="TITLE">YE MAYA CHESAVE</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">manu</column>
+            <column name="TITLE">ARYA</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">manu</column>
+            <column name="TITLE">AVENGERS</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">manu</column>
+            <column name="TITLE">LEGO</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">manu</column>
+            <column name="TITLE">MAGADEERA</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">manu</column>
+            <column name="TITLE">TEMPER</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">rema</column>
+            <column name="TITLE">MAGADEERA</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">vivek</column>
+            <column name="TITLE">BATMAN</column>
+        </table>
+        <table name="WISHLIST">
+            <column name="USERNAME">vivek</column>
+            <column name="TITLE">RIO</column>
+        </table>
+    </database>
+</pma_xml_export>
