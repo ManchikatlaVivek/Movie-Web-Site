@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.4.10
+- http://www.phpmyadmin.net
+-
+- Host: localhost:8889
+- Generation Time: Nov 20, 2015 at 09:24 AM
+- Server version: 5.5.42
+- PHP Version: 5.6.10
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="userDb" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="userInfo">
+                CREATE TABLE `userInfo` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `username` varchar(30) NOT NULL,
+                  `password` varchar(30) NOT NULL,
+                  `mobile` text,
+                  `email` varchar(40) DEFAULT NULL,
+                  `gender` char(1) NOT NULL,
+                  `bday` date NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'userDb'
+    -->
+    <database name="userDb">
+        <!-- Table userInfo -->
+        <table name="userInfo">
+            <column name="id">85</column>
+            <column name="username">vivek</column>
+            <column name="password">m</column>
+            <column name="mobile">9567036487</column>
+            <column name="email">vivekmanchikatla1996@gmail.com</column>
+            <column name="gender">M</column>
+            <column name="bday">2015-11-16</column>
+        </table>
+        <table name="userInfo">
+            <column name="id">86</column>
+            <column name="username">c</column>
+            <column name="password">c</column>
+            <column name="mobile">1234567890</column>
+            <column name="email">b@gmail.com</column>
+            <column name="gender">M</column>
+            <column name="bday">0000-00-00</column>
+        </table>
+        <table name="userInfo">
+            <column name="id">87</column>
+            <column name="username">aravind</column>
+            <column name="password">kanakadurga</column>
+            <column name="mobile">7736296712</column>
+            <column name="email">aravindmudhiraj007@gmail.com</column>
+            <column name="gender">M</column>
+            <column name="bday">1995-08-22</column>
+        </table>
+        <table name="userInfo">
+            <column name="id">92</column>
+            <column name="username">a</column>
+            <column name="password">a</column>
+            <column name="mobile">8989898989</column>
+            <column name="email">ava@gmail.com</column>
+            <column name="gender">M</column>
+            <column name="bday">2015-11-04</column>
+        </table>
+        <table name="userInfo">
+            <column name="id">93</column>
+            <column name="username">rema</column>
+            <column name="password">movie</column>
+            <column name="mobile">9876371562</column>
+            <column name="email">rema@gmail.com</column>
+            <column name="gender">F</column>
+            <column name="bday">2015-11-10</column>
+        </table>
+    </database>
+</pma_xml_export>
