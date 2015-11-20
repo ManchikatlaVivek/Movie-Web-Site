@@ -1,0 +1,25 @@
+#login1{
+    border-radius: 15px 50px 30px 5px;
+    background: #DFDFDF;
+    padding: 20px; 
+    width: 175px;
+    height: 100px; 
+}
+body
+{
+	background:url("images/56315d252554956314b55e8b7d9aba197b8adbda.jpg");
+	  background-size: 1920px 1080px;
+}
+#reg {
+    border-radius: 15px 50px;
+    background: #D6D6D6;
+    padding: 20px; 
+    width: 180px;
+    height: 15px; 
+    color:black;
+   text-align: center;
+   float: right;
+}
+h2{
+	padding:20px;
+}

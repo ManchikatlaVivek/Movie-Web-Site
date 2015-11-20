@@ -1,0 +1,62 @@
+mysql> show tables;
++------------------+
+| Tables_in_movies |
++------------------+
+| actor            |
+| awards           |
+| director         |
+| movie            |
++------------------+
+4 rows in set (0.00 sec)
+
+mysql> desc actor;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| actor_id     | varchar(30) | NO   | PRI | NULL    |       |
+| fname        | varchar(30) | YES  |     | NULL    |       |
+| lname        | varchar(30) | YES  |     | NULL    |       |
+| dob          | date        | YES  |     | NULL    |       |
+| no_of_awards | int(11)     | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+5 rows in set (0.03 sec)
+
+mysql> desc awards;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| awardname | varchar(30) | YES  |     | NULL    |       |
+| movie_id  | varchar(30) | YES  | MUL | NULL    |       |
+| year      | varchar(4)  | YES  |     | NULL    |       |
+| category  | varchar(30) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> desc director
+    -> ;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| director_id | varchar(30) | NO   | PRI | NULL    |       |
+| fname       | varchar(30) | YES  |     | NULL    |       |
+| lname       | varchar(30) | YES  |     | NULL    |       |
+| dob         | date        | YES  |     | NULL    |       |
+| gender      | char(1)     | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> desc movie;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| movie_id    | varchar(30) | NO   | PRI | NULL    |       |
+| actor_id    | varchar(30) | YES  | MUL | NULL    |       |
+| director_id | varchar(30) | YES  | MUL | NULL    |       |
+| title       | varchar(30) | YES  |     | NULL    |       |
+| genre       | varchar(30) | YES  |     | NULL    |       |
+| year        | varchar(4)  | YES  |     | NULL    |       |
+| rating      | int(11)     | YES  |     | NULL    |       |
+| runtime     | int(11)     | YES  |     | NULL    |       |
+| collections | int(11)     | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+9 rows in set (0.01 sec)

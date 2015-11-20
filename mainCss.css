@@ -1,0 +1,22 @@
+ul{
+	list-style-type: none;
+	margin:0;
+	padding:10px;
+	font-size:22px;
+	
+}
+a{
+	text-decoration: none;
+
+}
+
+li{
+	
+	border-radius: 15px 50px;
+    background: #D6D6D6;
+    padding: 20px; 
+    width: 180px;
+    height: 15px; 
+    float:left;
+    text-align: center;
+}
